@@ -13,3 +13,21 @@
  *= require_tree .
  *= require_self
  */
+
+ul > li {
+  list-style: none;
+}
+
+li {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+li:nth-child(2) {
+  gap: 41px;
+}
+
+li:nth-child(3) {
+  gap: 16px;
+}
