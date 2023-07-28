@@ -42,20 +42,5 @@ RAILS - BUT NOT SO RAILS
   <%= submit_tag 'Create account' %>
   -->
 
-<%= form_with model: @user do |form| %>
-  <ul>
-    <li>
-      <%= form.label :username%>
-      <%= form.text_field :username %>
-    </li>
-    <li>
-      <%= form.label :email %>
-      <%= form.email_field :email %>
-    </li>
-    <li>
-      <%= form.label :password %>
-      <%= form.password_field :password %>
-    </li>
-  </ul>
-  <%= form.submit "Create account" %>
-<% end %>
+<h1>Create new user </h1>
+<%= render 'form', user: @user %>
