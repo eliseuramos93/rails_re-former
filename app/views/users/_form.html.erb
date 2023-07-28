@@ -1,4 +1,16 @@
 <%= form_with model: user do |form| %>
+
+  <% if user.errors.any? %>
+    <div id="error-msgs">
+      <h4> <%= pluralize(@user.errors.count, "error")%> prohibited your submission from being fulfilled:</h2>
+      <ul>
+        <%user.errors.full_messages.each do |msg| %>
+          <li> <%= msg %> </li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+  
   <ul>
     <li>
       <%= form.label :username%>
